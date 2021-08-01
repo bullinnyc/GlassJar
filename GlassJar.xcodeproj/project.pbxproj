@@ -11,6 +11,11 @@
 		DB6D139026B44B9D009E9903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D138F26B44B9D009E9903 /* ContentView.swift */; };
 		DB6D139226B44B9F009E9903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6D139126B44B9F009E9903 /* Assets.xcassets */; };
 		DB6D139526B44B9F009E9903 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6D139426B44B9F009E9903 /* Preview Assets.xcassets */; };
+		DB6D139D26B503FF009E9903 /* JarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D139C26B503FF009E9903 /* JarView.swift */; };
+		DB6D139F26B504D8009E9903 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D139E26B504D8009E9903 /* CoinView.swift */; };
+		DB758A4326B6654800FAD7F4 /* Hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB758A4226B6654800FAD7F4 /* Hidden.swift */; };
+		DB758A4626B665EB00FAD7F4 /* Extension + AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB758A4526B665EB00FAD7F4 /* Extension + AnyTransition.swift */; };
+		DB76087126B6C6A200A734CA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DB76087026B6C6A200A734CA /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		DB6D139126B44B9F009E9903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6D139426B44B9F009E9903 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB6D139626B44B9F009E9903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6D139C26B503FF009E9903 /* JarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarView.swift; sourceTree = "<group>"; };
+		DB6D139E26B504D8009E9903 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		DB758A4226B6654800FAD7F4 /* Hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidden.swift; sourceTree = "<group>"; };
+		DB758A4526B665EB00FAD7F4 /* Extension + AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + AnyTransition.swift"; sourceTree = "<group>"; };
+		DB76087026B6C6A200A734CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,7 @@
 		DB6D138126B44B9D009E9903 = {
 			isa = PBXGroup;
 			children = (
+				DB76087026B6C6A200A734CA /* .gitignore */,
 				DB6D138C26B44B9D009E9903 /* GlassJar */,
 				DB6D138B26B44B9D009E9903 /* Products */,
 			);
@@ -53,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				DB6D138D26B44B9D009E9903 /* GlassJarApp.swift */,
-				DB6D138F26B44B9D009E9903 /* ContentView.swift */,
+				DB758A4826B6661B00FAD7F4 /* Views */,
+				DB758A4726B665FA00FAD7F4 /* Extensions */,
+				DB758A4426B6656F00FAD7F4 /* Modifiers */,
 				DB6D139126B44B9F009E9903 /* Assets.xcassets */,
 				DB6D139626B44B9F009E9903 /* Info.plist */,
 				DB6D139326B44B9F009E9903 /* Preview Content */,
@@ -67,6 +80,32 @@
 				DB6D139426B44B9F009E9903 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB758A4426B6656F00FAD7F4 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DB758A4226B6654800FAD7F4 /* Hidden.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		DB758A4726B665FA00FAD7F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB758A4526B665EB00FAD7F4 /* Extension + AnyTransition.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB758A4826B6661B00FAD7F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB6D138F26B44B9D009E9903 /* ContentView.swift */,
+				DB6D139C26B503FF009E9903 /* JarView.swift */,
+				DB6D139E26B504D8009E9903 /* CoinView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6D139526B44B9F009E9903 /* Preview Assets.xcassets in Resources */,
+				DB76087126B6C6A200A734CA /* .gitignore in Resources */,
 				DB6D139226B44B9F009E9903 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6D139026B44B9D009E9903 /* ContentView.swift in Sources */,
+				DB758A4326B6654800FAD7F4 /* Hidden.swift in Sources */,
+				DB6D139F26B504D8009E9903 /* CoinView.swift in Sources */,
+				DB758A4626B665EB00FAD7F4 /* Extension + AnyTransition.swift in Sources */,
+				DB6D139D26B503FF009E9903 /* JarView.swift in Sources */,
 				DB6D138E26B44B9D009E9903 /* GlassJarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

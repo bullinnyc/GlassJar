@@ -18,62 +18,62 @@ struct JarView: View {
     var body: some View {
         GeometryReader { geometry in
             let size = min(geometry.size.width, geometry.size.height) // 300
-            let middleX = size / 2 // 150
-            let size270 = size * 0.9 // 270
-            let size210 = size * 0.7 // 210
-            let size70 = size210 / 3 // 70
-            let size230 = size - size70 // 230
-            let size90 = size * 0.3 // 90
-            let size240 = size * 0.8 // 240
-            let size50 = size / 6 // 50
-            let size30 = size * 0.1 // 30
-            let size60 = size * 0.2 // 60
-            let size10 = size240 - size230 // 10
-            let size40 = size50 - size10 // 40
-            let size110 = middleX - size40 // 110
-            let size140 = middleX - size10 // 140
-            let size190 = size240 - size50 // 190
-            let size100 = middleX - size50 // 100
-            let size120 = size * 0.4 // 120
-            let size180 = size * 0.6 // 180
-            let size280 = size270 + size10 // 280
-            let size200 = size210 - size10 // 200
-            let size215 = size200 + (size30 / 2) // 215
-            let size250 = size200 + size50 // 250
-            let size170 = size200 - size30 // 170
-            let size220 = middleX + size70 // 220
-            let size20 = size50 - size30 // 20
-            let size25 = size50 / 2 // 25
+            let coordinate9 = size * 0.03 // 9
+            let coordinate21 = size * 0.07 // 21
+            let coordinate24 = size * 0.08 // 24
+            let coordinate30 = size * 0.1 // 30
+            let coordinate39 = size * 0.13 // 39
+            let coordinate51 = size * 0.17 // 51
+            let coordinate60 = size * 0.2 // 60
+            let coordinate69 = size * 0.23 // 69
+            let coordinate90 = size * 0.3 // 90
+            let coordinate99 = size * 0.33 // 99
+            let coordinate111 = size * 0.37 // 111
+            let coordinate120 = size * 0.4 // 120
+            let coordinate141 = size * 0.47 // 141
+            let middleX = size * 0.5 // 150
+            let coordinate171 = size * 0.57 // 171
+            let coordinate180 = size * 0.6 // 180
+            let coordinate189 = size * 0.63 // 189
+            let coordinate201 = size * 0.67 // 201
+            let coordinate210 = size * 0.7 // 210
+            let coordinate216 = size * 0.72 // 216
+            let coordinate219 = size * 0.73 // 219
+            let coordinate231 = size * 0.77 // 231
+            let coordinate240 = size * 0.8 // 240
+            let coordinate249 = size * 0.83 // 249
+            let coordinate270 = size * 0.9 // 270
+            let coordinate279 = size * 0.93 // 279
             
             ZStack(alignment: .bottom) {
                 // Coins in jar
                 ZStack {
-                    CoinView(width: size30, height: size30)
+                    CoinView(width: coordinate30, height: coordinate30)
                         .rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))
-                        .offset(x: 0, y: -(size20))
+                        .offset(x: 0, y: -(coordinate21))
                     
-                    CoinView(width: size30, height: size30)
+                    CoinView(width: coordinate30, height: coordinate30)
                         .rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))
-                        .offset(x: size20, y: -(size25))
+                        .offset(x: coordinate21, y: -(coordinate24))
                     
-                    CoinView(width: size30, height: size30)
+                    CoinView(width: coordinate30, height: coordinate30)
                         .rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))
-                        .offset(x: -(size30), y: -(size50))
+                        .offset(x: -(coordinate30), y: -(coordinate51))
                     
-                    CoinView(width: size30, height: size30)
+                    CoinView(width: coordinate30, height: coordinate30)
                         .rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))
-                        .offset(x: size30, y: -(size50))
+                        .offset(x: coordinate30, y: -(coordinate51))
                 }
                 
                 // Coins from jar
                 ZStack {
-                    CoinView(width: size30, height: size30)
+                    CoinView(width: coordinate30, height: coordinate30)
                         .rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))
-                        .offset(x: size30, y: size40)
+                        .offset(x: coordinate30, y: coordinate39)
                     
-                    CoinView(width: size30, height: size30)
+                    CoinView(width: coordinate30, height: coordinate30)
                         .rotation3DEffect(.degrees(60), axis: (x: 100, y: 10, z: 0))
-                        .offset(x: size50, y: size30)
+                        .offset(x: coordinate51, y: coordinate30)
                 }
                 .hidden(isHideExtraCoins, remove: true)
                 
@@ -81,26 +81,26 @@ struct JarView: View {
                 Group {
                     ZStack {
                         Path { path in
-                            path.move(to: CGPoint(x: size70, y: size270))
+                            path.move(to: CGPoint(x: coordinate69, y: coordinate270))
                             path.addQuadCurve(
-                                to: CGPoint(x: size230, y: size270),
+                                to: CGPoint(x: coordinate231, y: coordinate270),
                                 control: CGPoint(x: middleX, y: size)
                             )
                             path.addQuadCurve(
-                                to: CGPoint(x: size230, y: size70),
-                                control: CGPoint(x: size240, y: middleX)
+                                to: CGPoint(x: coordinate231, y: coordinate69),
+                                control: CGPoint(x: coordinate240, y: middleX)
                             )
-                            path.addLine(to: CGPoint(x: size210, y: size50))
-                            path.addLine(to: CGPoint(x: size210, y: size30))
+                            path.addLine(to: CGPoint(x: coordinate210, y: coordinate51))
+                            path.addLine(to: CGPoint(x: coordinate210, y: coordinate30))
                             path.addQuadCurve(
-                                to: CGPoint(x: size90, y: size30),
-                                control: CGPoint(x: middleX, y: size50)
+                                to: CGPoint(x: coordinate90, y: coordinate30),
+                                control: CGPoint(x: middleX, y: coordinate51)
                             )
-                            path.addLine(to: CGPoint(x: size90, y: size50))
-                            path.addLine(to: CGPoint(x: size70, y: size70))
+                            path.addLine(to: CGPoint(x: coordinate90, y: coordinate51))
+                            path.addLine(to: CGPoint(x: coordinate69, y: coordinate69))
                             path.addQuadCurve(
-                                to: CGPoint(x: size70, y: size270),
-                                control: CGPoint(x: size60, y: middleX)
+                                to: CGPoint(x: coordinate69, y: coordinate270),
+                                control: CGPoint(x: coordinate60, y: middleX)
                             )
                         }
                         .stroke(Color.black, lineWidth: 1)
@@ -108,26 +108,26 @@ struct JarView: View {
                     
                     ZStack {
                         Path { path in
-                            path.move(to: CGPoint(x: size70, y: size270))
+                            path.move(to: CGPoint(x: coordinate69, y: coordinate270))
                             path.addQuadCurve(
-                                to: CGPoint(x: size230, y: size270),
-                                control: CGPoint(x: middleX, y: size + size10)
+                                to: CGPoint(x: coordinate231, y: coordinate270),
+                                control: CGPoint(x: middleX, y: size + coordinate9)
                             )
                             path.addQuadCurve(
-                                to: CGPoint(x: size230, y: size70),
-                                control: CGPoint(x: size240, y: middleX)
+                                to: CGPoint(x: coordinate231, y: coordinate69),
+                                control: CGPoint(x: coordinate240, y: middleX)
                             )
-                            path.addLine(to: CGPoint(x: size210, y: size50))
-                            path.addLine(to: CGPoint(x: size210, y: size30))
+                            path.addLine(to: CGPoint(x: coordinate210, y: coordinate51))
+                            path.addLine(to: CGPoint(x: coordinate210, y: coordinate30))
                             path.addQuadCurve(
-                                to: CGPoint(x: size90, y: size30),
-                                control: CGPoint(x: middleX, y: size50)
+                                to: CGPoint(x: coordinate90, y: coordinate30),
+                                control: CGPoint(x: middleX, y: coordinate51)
                             )
-                            path.addLine(to: CGPoint(x: size90, y: size50))
-                            path.addLine(to: CGPoint(x: size70, y: size70))
+                            path.addLine(to: CGPoint(x: coordinate90, y: coordinate51))
+                            path.addLine(to: CGPoint(x: coordinate69, y: coordinate69))
                             path.addQuadCurve(
-                                to: CGPoint(x: size70, y: size270),
-                                control: CGPoint(x: size60, y: middleX)
+                                to: CGPoint(x: coordinate69, y: coordinate270),
+                                control: CGPoint(x: coordinate60, y: middleX)
                             )
                         }
                         .fill(
@@ -146,17 +146,17 @@ struct JarView: View {
                 Group {
                     ZStack {
                         Path { path in
-                            path.move(to: CGPoint(x: size90, y: size30))
+                            path.move(to: CGPoint(x: coordinate90, y: coordinate30))
                             path.addQuadCurve(
-                                to: CGPoint(x: size210, y: size30),
+                                to: CGPoint(x: coordinate210, y: coordinate30),
                                 control: CGPoint(x: middleX, y: 0)
                             )
                             path.addQuadCurve(
-                                to: CGPoint(x: size90, y: size30),
-                                control: CGPoint(x: middleX, y: size50)
+                                to: CGPoint(x: coordinate90, y: coordinate30),
+                                control: CGPoint(x: middleX, y: coordinate51)
                             )
                             path.addQuadCurve(
-                                to: CGPoint(x: size90, y: size30),
+                                to: CGPoint(x: coordinate90, y: coordinate30),
                                 control: CGPoint(x: middleX, y: 0)
                             )
                         }
@@ -165,17 +165,17 @@ struct JarView: View {
                     
                     ZStack {
                         Path { path in
-                            path.move(to: CGPoint(x: size90, y: size30))
+                            path.move(to: CGPoint(x: coordinate90, y: coordinate30))
                             path.addQuadCurve(
-                                to: CGPoint(x: size210, y: size30),
+                                to: CGPoint(x: coordinate210, y: coordinate30),
                                 control: CGPoint(x: middleX, y: 0)
                             )
                             path.addQuadCurve(
-                                to: CGPoint(x: size90, y: size30),
-                                control: CGPoint(x: middleX, y: size50)
+                                to: CGPoint(x: coordinate90, y: coordinate30),
+                                control: CGPoint(x: middleX, y: coordinate51)
                             )
                             path.addQuadCurve(
-                                to: CGPoint(x: size90, y: size30),
+                                to: CGPoint(x: coordinate90, y: coordinate30),
                                 control: CGPoint(x: middleX, y: 0)
                             )
                         }
@@ -194,10 +194,10 @@ struct JarView: View {
                 // Bezel
                 ZStack {
                     Path { path in
-                        path.move(to: CGPoint(x: size90, y: size40))
+                        path.move(to: CGPoint(x: coordinate90, y: coordinate39))
                         path.addQuadCurve(
-                            to: CGPoint(x: size210, y: size40),
-                            control: CGPoint(x: middleX, y: size60)
+                            to: CGPoint(x: coordinate210, y: coordinate39),
+                            control: CGPoint(x: middleX, y: coordinate60)
                         )
                     }
                     .stroke(Color.black, lineWidth: 4)
@@ -207,29 +207,29 @@ struct JarView: View {
                 // Line jar
                 ZStack {
                     Path { path in
-                        path.move(to: CGPoint(x: size90, y: size140))
-                        path.addLine(to: CGPoint(x: size90, y: size190))
+                        path.move(to: CGPoint(x: coordinate90, y: coordinate141))
+                        path.addLine(to: CGPoint(x: coordinate90, y: coordinate189))
                         path.addQuadCurve(
-                            to: CGPoint(x: size110, y: size210),
-                            control: CGPoint(x: size100, y: size210)
+                            to: CGPoint(x: coordinate111, y: coordinate210),
+                            control: CGPoint(x: coordinate99, y: coordinate210)
                         )
                         
-                        path.move(to: CGPoint(x: size120, y: size270))
+                        path.move(to: CGPoint(x: coordinate120, y: coordinate270))
                         path.addQuadCurve(
-                            to: CGPoint(x: size200, y: size270),
-                            control: CGPoint(x: size180, y: size280)
+                            to: CGPoint(x: coordinate201, y: coordinate270),
+                            control: CGPoint(x: coordinate180, y: coordinate279)
                         )
                         
-                        path.move(to: CGPoint(x: size215, y: size110))
+                        path.move(to: CGPoint(x: coordinate216, y: coordinate111))
                         path.addQuadCurve(
-                            to: CGPoint(x: size200, y: size70),
-                            control: CGPoint(x: size210, y: size70)
+                            to: CGPoint(x: coordinate201, y: coordinate69),
+                            control: CGPoint(x: coordinate210, y: coordinate69)
                         )
                         
-                        path.move(to: CGPoint(x: size70, y: size250))
+                        path.move(to: CGPoint(x: coordinate69, y: coordinate249))
                         path.addQuadCurve(
-                            to: CGPoint(x: size170, y: size220),
-                            control: CGPoint(x: size100, y: size210)
+                            to: CGPoint(x: coordinate171, y: coordinate219),
+                            control: CGPoint(x: coordinate99, y: coordinate210)
                         )
                     }
                     .stroke(Color.black, lineWidth: 0.5)

@@ -20,4 +20,15 @@ extension AnyTransition {
         
         return .asymmetric(insertion: insertion, removal: removal)
     }
+    
+    // MARK: - Public Methods
+    static func coinToss(fall: CGFloat) -> AnyTransition {
+        let insertion = AnyTransition.opacity
+            .combined(with: AnyTransition.scale(scale: 4))
+            .animation(.spring())
+        
+        let removal = AnyTransition.offset(y: fall)
+        
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
 }

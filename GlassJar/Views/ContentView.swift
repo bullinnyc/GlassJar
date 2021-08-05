@@ -30,7 +30,7 @@ struct ContentView: View {
                                 width: geometry.size.width * 0.08,
                                 height: geometry.size.width * 0.08
                             )
-                            .transition(.coinToss)
+                            .transition(.coinToss(fall: geometry.size.width * 0.46))
                         }
                     }
                     .offset(y: geometry.size.width * -0.32)
@@ -52,10 +52,12 @@ struct ContentView: View {
     private func buttonAction() {
         withAnimation {
             isShowCoinAnimation.toggle()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                isShowCoinAnimation.toggle()
-            }
         }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                withAnimation {
+                    isShowCoinAnimation.toggle()
+                }
+            }
     }
 }
 

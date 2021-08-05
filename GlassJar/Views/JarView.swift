@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct JarView: View {
-    // MARK: - Public properties
+    // MARK: - Public Properties
     let width: CGFloat // 300
     let height: CGFloat // 300
     let isHideExtraCoins: Bool
